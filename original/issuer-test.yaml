@@ -1,0 +1,9 @@
+cat <<EOF | kubectl apply -f -
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: test-selfsigned
+  namespace: cert-manager-test
+spec:
+  selfSigned: {}
+EOF  
